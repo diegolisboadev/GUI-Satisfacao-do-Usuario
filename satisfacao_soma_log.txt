@@ -1,12 +1,12 @@
 ARQUIVO DE LOG - COM A SOMA DE CLIQUES DE SATISFAÇÕES
 
-Há um total de 2 clicks em Satisfação Ruim!
+Há um total de 5 clicks em Satisfação Ruim!
 
 Há um total de 3 clicks em Satisfação Regular!
 
 Há um total de 1 clicks em Satisfação Bom!
 
-Há um total de 2 clicks em Satisfação Ótimo!
+Há um total de 3 clicks em Satisfação Ótimo!
 
 Há um total de 1 clicks em Satisfação Excelente!
 
