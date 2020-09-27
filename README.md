@@ -1,5 +1,5 @@
 # GUI-Satisfacao-do-Usuario
 
-https://img.shields.io/github/license/DiegoLisboaPires/GUI-Satisfacao-do-Usuario?logoColor=blue&style=plastic
+![GitHub](https://img.shields.io/github/license/diegolisboadev/GUI-Satisfacao-do-Usuario?style=plastic)
 
 Sistema de Satisfação do Usuário com GUI Tkinter usando Python 3.
