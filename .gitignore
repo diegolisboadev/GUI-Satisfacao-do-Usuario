@@ -7,3 +7,6 @@
 # Outras Pastas
 .ideia
 __pycache
+
+# Ignorar o arquivo .spec
+.spec
