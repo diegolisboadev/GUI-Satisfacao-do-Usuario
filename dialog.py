@@ -1,5 +1,6 @@
 '''Classe com janela de dialogo Tkinter'''
 from tkinter import *
+import sys
 
 class Dialog:
 
@@ -11,7 +12,10 @@ class Dialog:
         self.titulo2 = titulo2
 
         self.top = Toplevel(parent)
-        self.top.iconbitmap("sorriso.ico")
+        if (sys.platform.startswith('win')): 
+            self.top.iconbitmap("sorriso.ico")
+        else:
+            self.top.iconbitmap('@sorriso.xbm')
         self.top.configure(background='#fff')
         self.top.transient(parent)
         self.top.grab_set()

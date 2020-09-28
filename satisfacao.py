@@ -7,9 +7,10 @@ __version__ = "1.0"
 
 from tkinter import *
 from tkinter import messagebox
-import os
+import os, sys
 from datetime import datetime
 from dialog import Dialog
+from PIL import Image, ImageTk
 
 class Satisfacao:
     def __init__(self, master=None):
@@ -214,7 +215,7 @@ class Satisfacao:
             else:
                 tipo_escrita = "w"
 
-            with open("satisfacao_log.txt", tipo_escrita) as file_click:
+            with open("satisfacao_log.txt", tipo_escrita, encoding='utf-8') as file_click:
                 if click == 1:
                     texto = "Voto Ruim"
                 elif click == 2:
@@ -237,7 +238,7 @@ class Satisfacao:
     def salvar_total_txt(self):
             '''salvar o total de cliques de cada satisfação button'''
             try:
-                with open("satisfacao_log.txt") as txt_read:
+                with open("satisfacao_log.txt", encoding='utf-8') as txt_read:
                     linhas = txt_read.readlines()
 
                     conta1 = conta2 = conta3 = conta4 = conta5 = 0
@@ -260,7 +261,7 @@ class Satisfacao:
                 else:
                     tipo_escrita = "w"
 
-                with open("satisfacao_soma_log.txt", tipo_escrita) as file_soma_click:
+                with open("satisfacao_soma_log.txt", tipo_escrita, encoding='utf-8') as file_soma_click:
                     file_soma_click.write("ARQUIVO DE LOG - COM A SOMA DE CLIQUES DE SATISFAÇÕES\n\n")
 
                     file_soma_click.write(f"Há um total de {conta1} clicks em Satisfação Ruim!\n\n")
@@ -275,7 +276,13 @@ class Satisfacao:
 root = Tk()
 Satisfacao(root)
 root.title("Satisfação do Usuário")
-root.iconbitmap("sorriso.ico")
+if (sys.platform.startswith('win')): 
+    root.iconbitmap("sorriso.ico")
+else:
+    root.iconbitmap('@sorriso.xbm')
+# root.iconbitmap(os.path.join(sys.path[0], 'sorriso.ico'))
+# root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='sorriso.ico'))
+
 root.configure(background='#fff')
 
 wLarg = root.winfo_reqwidth()

@@ -1,0 +1,12 @@
+# Omite Pasta Venv
+/venv
+
+# Omite Pasta .vscode
+.vscode
+
+# Outras Pastas
+.ideia
+__pycache
+
+# Ignorar o arquivo .spec
+.spec
