@@ -2,7 +2,7 @@ astroid==2.4.2
 Cython==0.29.21
 isort==5.5.3
 lazy-object-proxy==1.4.3
-Mako==1.1.3.dev0
+Mako==1.2.2
 Markdown @ file:///buildstream/freedesktop-sdk/components/python3-markdown.bst
 mccabe==0.6.1
 meson @ file:///buildstream/freedesktop-sdk/components/meson.bst
